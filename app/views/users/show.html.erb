@@ -1,0 +1,12 @@
+<h1>Single file Show</h1>
+<div><%= @user.name %></div>
+<%= image_tag(@user.avatar, size: '300X200') %>
+
+<h1>Multiple file Show</h1>
+ <% @user.pics.each do |pic| %>
+ <div>
+    <%= image_tag(pic, :width => 100) %>
+  </div>
+  <% end %>
+
+<%= link_to "Edit", edit_user_path%>

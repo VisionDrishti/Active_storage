@@ -1,0 +1,14 @@
+<h1>Users#new</h1>
+<%= form_with model: @user do |form| %>
+  <div>
+    <%= form.label :name, "Name" %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :avatar, "Avatar" %>
+    <%= form.file_field :avatar %>
+  </div>
+  <div>
+    <%= form.submit "Submit" %>
+  </div>
+<% end %>
